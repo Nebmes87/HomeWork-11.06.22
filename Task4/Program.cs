@@ -12,7 +12,7 @@ int prompt(string message)
     return number;
 }
 int number = prompt("Введите число соответствующее дню недели: ");
-if ((number == 6) || (number == 7))
+if (number == 6 || number == 7)
 {
     System.Console.WriteLine($"{number} -> да");
 }
@@ -31,6 +31,10 @@ int promt(string message)
     return N;
 }
 int N = promt("Введите число соответствующее дню недели: ");
+if (number < 1 || number > 7)
+{
+    System.Console.WriteLine("Вы ввели не правильное число, попробуйте еще раз");
+}
 if (N==1) System.Console.WriteLine($"{N} - нет, понедельник не является выходным");
 if (N==2) System.Console.WriteLine($"{N} - нет, вторник не является выходным");
 if (N==3) System.Console.WriteLine($"{N} - нет, среда не является выходным");

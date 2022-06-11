@@ -15,3 +15,9 @@ int number = new Random().Next(100, 1000);
 int A = number / 100;
 int B = number % 10;
 System.Console.WriteLine($"{number} -> {A}{B}");
+
+// или
+
+int randomInt = new Random().Next(100,1000);
+int result = (randomInt - randomInt%100)/10+(randomInt%10);
+Console.WriteLine($"{randomInt} -> {result}"); 

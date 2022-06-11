@@ -4,21 +4,18 @@
 // 78 -> третьей цифры нет
 // 32679 -> 6
 
-int prompt(string message)
+void thirdNumber(string number)
 {
-    Console.Write(message);  
-    string NumberStr = Console.ReadLine();
-    int N = int.Parse(NumberStr);
-    return N;
+    if (number.Length < 3)
+    {
+        Console.WriteLine("Третьей цифры нет");
+    }
+    else
+    {
+        Console.WriteLine(number[2]);
+    }
 }
-int N = prompt("Введите число: ");
 
-if (N < 100)  
-{
-    System.Console.WriteLine($"{N} -> третьей цифры нет");
-}
-else 
-{
-    int result = N % 10;
-    System.Console.WriteLine($"{N} -> {result}");
-}
+Console.Write("Введите цифру: ");
+string UserStr = Console.ReadLine();
+thirdNumber(UserStr);
