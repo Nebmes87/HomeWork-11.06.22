@@ -12,4 +12,13 @@ int prompt(string message)
     return number;
 }
 int number = prompt("Введите трехзначное число: ");
-System.Console.WriteLine($"{number} -> {number % 100 / 10}");
+int result = number % 100 / 10;
+
+if ((number > 99) && (number < 1000))
+{
+    System.Console.WriteLine($"{number} -> {result}");
+}
+else 
+{
+    System.Console.WriteLine("Вы ввели не правильное число");
+}

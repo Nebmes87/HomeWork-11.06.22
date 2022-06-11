@@ -8,3 +8,10 @@ int numberA = new Random().Next(1, 10);
 int numberB = new Random().Next(1, 10);
 int numberC = new Random().Next(1, 10);
 System.Console.WriteLine($"{numberA}{numberB}{numberC} -> {numberA}{numberC}");
+
+//или
+
+int number = new Random().Next(100, 1000);
+int A = number / 100;
+int B = number % 10;
+System.Console.WriteLine($"{number} -> {A}{B}");
